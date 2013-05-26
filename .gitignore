@@ -1,13 +1,6 @@
-*.class
-*.log
-
-# sbt specific
-dist/*
+.project
+.settings/org.eclipse.m2e.core.prefs
 target/
-lib_managed/
-src_managed/
-project/boot/
-project/plugins/project/
-
-# Scala-IDE specific
-.scala_dependencies
+.classpath
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.jdt.core.prefs
