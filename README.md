@@ -29,3 +29,7 @@ Interested Links
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/daf12ea06b14ffdff5a8218656362656 "githalytics.com")](http://githalytics.com/latinojoel/pdi-apple-pushnotifications)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/latinojoel/pdi-apple-pushnotifications/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
