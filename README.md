@@ -1,5 +1,8 @@
 Pentaho Data Integration Apple Push Notifications
 =============================
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/latinojoel/pdi-apple-pushnotifications/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 This is a plugin that allows to you send push notifications from **Pentaho Data Integration** to any iOS and OS X devices, using **Apple Push Notification Service**. This plugin is written in **Scala** and uses [Java Apple Push Notification Service Library](https://github.com/notnoop/java-apns/).
 The motivation for developed this plugin is for you, as ETL Developer, receive a quickly notifications about state of ETL executions in any place (than faster email). However, this plugin can be use for other's scenarios.
 
@@ -30,6 +33,4 @@ Interested Links
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/daf12ea06b14ffdff5a8218656362656 "githalytics.com")](http://githalytics.com/latinojoel/pdi-apple-pushnotifications)
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/latinojoel/pdi-apple-pushnotifications/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
