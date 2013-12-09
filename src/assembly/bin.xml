@@ -12,14 +12,6 @@
 	<dependencySets>
 		<dependencySet>
 			<includes>
-				<include>org.scala-lang:scala-library</include>
-			</includes>
-			<unpack>false</unpack>
-			<scope>runtime</scope>
-			<outputDirectory>${plugin.name}/lib</outputDirectory>
-		</dependencySet>
-		<dependencySet>
-			<includes>
 				<include>com.notnoop.apns:apns</include>
 			</includes>
 			<unpack>false</unpack>
@@ -45,6 +37,14 @@
 		<dependencySet>
 			<includes>
 				<include>com.fasterxml.jackson.core:jackson-databind</include>
+			</includes>
+			<unpack>false</unpack>
+			<scope>runtime</scope>
+			<outputDirectory>${plugin.name}/lib</outputDirectory>
+		</dependencySet>
+		<dependencySet>
+			<includes>
+				<include>org.slf4j:slf4j-api</include>
 			</includes>
 			<unpack>false</unpack>
 			<scope>runtime</scope>
