@@ -38,11 +38,6 @@
 		</dependency>
 		<dependency>
 			<groupId>pentaho-kettle</groupId>
-			<artifactId>kettle-db</artifactId>
-			<version>${kettle.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>pentaho-kettle</groupId>
 			<artifactId>kettle-engine</artifactId>
 			<version>${kettle.version}</version>
 		</dependency>
@@ -67,26 +62,20 @@
 			<artifactId>json-simple</artifactId>
 			<version>1.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>1.8.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>Jackson-core</artifactId>
-			<version>2.1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>Jackson-annotations</artifactId>
-			<version>2.1.4</version>
-		</dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.5</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.1.4</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
 		<dependency>
 			<groupId>com.notnoop.apns</groupId>
 			<artifactId>apns</artifactId>

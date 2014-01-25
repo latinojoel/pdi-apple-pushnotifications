@@ -3,10 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
 	<formats>
+		<format>dir</format>
 		<format>zip</format>
-		<format>tar</format>
 		<format>tar.gz</format>
-		<format>tar.bz2</format>
 	</formats>
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<dependencySets>
@@ -20,15 +19,7 @@
 		</dependencySet>
 		<dependencySet>
 			<includes>
-				<include>com.fasterxml.jackson.core:Jackson-core</include>
-			</includes>
-			<unpack>false</unpack>
-			<scope>runtime</scope>
-			<outputDirectory>${plugin.name}/lib</outputDirectory>
-		</dependencySet>
-		<dependencySet>
-			<includes>
-				<include>com.fasterxml.jackson.core:Jackson-annotations</include>
+				<include>org.mockito:mockito-all</include>
 			</includes>
 			<unpack>false</unpack>
 			<scope>runtime</scope>

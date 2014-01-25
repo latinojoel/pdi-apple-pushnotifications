@@ -5,7 +5,7 @@
 	<libraries>
 		<library name="lib/push.notification.step-1.0.0.jar"/>
 		<library name="lib/jackson-databind-2.1.4.jar"/>
-		<library name="lib/Jackson-core-2.1.4.jar"/>
+		<library name="lib/mockito-all-1.9.5.jar"/>
 		<library name="lib/Jackson-annotations-2.1.4.jar"/>
 		<library name="lib/apns-0.2.3.jar"/>
 		<library name="lib/slf4j-api-1.7.2.jar"/>

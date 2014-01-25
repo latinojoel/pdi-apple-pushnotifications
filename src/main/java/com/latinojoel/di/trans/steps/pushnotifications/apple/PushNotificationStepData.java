@@ -1,8 +1,7 @@
 /*
- * Pentaho Data Integration Apple Push Notifications
- * https://github.com/latinojoel/pdi-apple-pushnotifications
- *
- * Copyright (c) 2009 about.me/latinojoel
+ * Pentaho Data Integration Apple Push Notifications https://github.com/latinojoel/pdi-apple-pushnotifications
+ * 
+ * Copyright (c) 2014 http://about.me/latinojoel
  *
  * Licensed under the GNU General Public License, Version 3.0;
  * you may not use this file except in compliance with the License.
