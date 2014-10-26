@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.latinojoel.di.trans.steps.pushnotifications.apple</groupId>
-	<artifactId>push.notification.step</artifactId>
-	<version>1.0.0</version>
+	<groupId>com.latinojoel.di.trans.steps.pushnotifications</groupId>
+	<artifactId>apple.push.notification.step</artifactId>
+	<version>1.0.1</version>
 	<name>${project.artifactId}</name>
 	<description>Plugin that provide send apple push notifications from Pentaho Data Integration</description>
 	<inceptionYear>2012</inceptionYear>

@@ -13,30 +13,7 @@
 			<includes>
 				<include>com.notnoop.apns:apns</include>
 			</includes>
-			<unpack>false</unpack>
-			<scope>runtime</scope>
-			<outputDirectory>${plugin.name}/lib</outputDirectory>
-		</dependencySet>
-		<dependencySet>
-			<includes>
-				<include>org.mockito:mockito-all</include>
-			</includes>
-			<unpack>false</unpack>
-			<scope>runtime</scope>
-			<outputDirectory>${plugin.name}/lib</outputDirectory>
-		</dependencySet>
-		<dependencySet>
-			<includes>
-				<include>com.fasterxml.jackson.core:jackson-databind</include>
-			</includes>
-			<unpack>false</unpack>
-			<scope>runtime</scope>
-			<outputDirectory>${plugin.name}/lib</outputDirectory>
-		</dependencySet>
-		<dependencySet>
-			<includes>
-				<include>org.slf4j:slf4j-api</include>
-			</includes>
+			<useTransitiveFiltering>true</useTransitiveFiltering>
 			<unpack>false</unpack>
 			<scope>runtime</scope>
 			<outputDirectory>${plugin.name}/lib</outputDirectory>
@@ -54,9 +31,9 @@
 		</fileSet>
 		<fileSet>
 			<directory>target</directory>
-			<outputDirectory>${plugin.name}/lib</outputDirectory>
+			<outputDirectory>${plugin.name}</outputDirectory>
 			<includes>
-				<include>push.notification.step-*.jar</include>
+				<include>apple.push.notification.step-*.jar</include>
 			</includes>
 		</fileSet>
 	</fileSets>
