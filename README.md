@@ -1,4 +1,4 @@
-![Apple Push Notification icon](https://raw2.github.com/latinojoel/pdi-apple-pushnotifications/master/resources/push.png) Pentaho Data Integration Apple Push Notifications
+![Apple Push Notification icon](https://raw.githubusercontent.com/latinojoel/pdi-apple-pushnotifications/master/src/main/resources/com/latinojoel/di/trans/steps/pushnotifications/apple/push.png) Pentaho Data Integration Apple Push Notifications
 =============================
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/latinojoel/pdi-apple-pushnotifications/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
