@@ -74,7 +74,7 @@ public class PushNotificationStep extends BaseStep implements StepInterface {
     try {
       if (first) {
         first = false;
-        data.outputRowMeta = super.getInputRowMeta();
+        data.outputRowMeta = super.getInputRowMeta().clone();
         data.nrPrevFields = data.outputRowMeta.size();
         meta.getFields(data.outputRowMeta, getStepname(), null, null, this);
 
@@ -122,10 +122,14 @@ public class PushNotificationStep extends BaseStep implements StepInterface {
         }
 
       }
-      return true;
     } catch (Exception e) {
-      return false;
+      if (getStepMeta().isDoingErrorHandling()) {
+        putError(getInputRowMeta(), r, 1L, e.toString(), null, "PUSHAPPLE001");
+      } else {
+        new KettleStepException(e);
+      }
     }
+    return true;
   }
 
   /**

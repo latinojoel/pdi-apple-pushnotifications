@@ -1120,10 +1120,12 @@ public class PushNotificationStepDialog extends BaseStepDialog implements StepDi
     // Something was changed in the row.
     final Map<String, Integer> fields = inputFields;
     final Set<String> keySet = fields.keySet();
-    final String[] fieldNames = (String[]) keySet.toArray();
-    Const.sortStrings(fieldNames);
-    ciFieldsCustomFields[1].setComboValues(fieldNames);
-    ciFieldsLocalizedArgument[0].setComboValues(fieldNames);
+    if (keySet != null && keySet.toArray().length > 0) {
+      final String[] fieldNames = (String[]) keySet.toArray();
+      Const.sortStrings(fieldNames);
+      ciFieldsCustomFields[1].setComboValues(fieldNames);
+      ciFieldsLocalizedArgument[0].setComboValues(fieldNames);
+    }
   }
 
   /**
