@@ -77,15 +77,15 @@ import com.notnoop.apns.ApnsServiceBuilder;
  * @author <a href="mailto:jlatino@sapo.pt">Joel Latino</a>
  * @since 1.0.1
  */
-public class PushNotificationStepDialog extends BaseStepDialog implements StepDialogInterface {
+public class PushNotificationDialog extends BaseStepDialog implements StepDialogInterface {
 
   /** for i18n purposes. **/
-  private static final Class<?> PKG = PushNotificationStepDialog.class;
+  private static final Class<?> PKG = PushNotificationDialog.class;
 
   /** Fields from previous step. */
   private RowMetaInterface prevFields;
 
-  private PushNotificationStepMeta input;
+  private PushNotificationMeta input;
   private Text wResponseField;
   private CCombo wDeviceTokenField, wBadgeField, wSoundField, wAlertBodyField,
       wActionLocalizedKeyField,
@@ -103,10 +103,10 @@ public class PushNotificationStepDialog extends BaseStepDialog implements StepDi
   private List<ColumnInfo> fieldColumns = new ArrayList<ColumnInfo>();
   private Shell parent;
 
-  public PushNotificationStepDialog(Shell shell, BaseStepMeta meta, TransMeta transMeta,
+  public PushNotificationDialog(Shell shell, BaseStepMeta meta, TransMeta transMeta,
       String name) {
     super(shell, meta, transMeta, name);
-    this.input = (PushNotificationStepMeta) meta;
+    this.input = (PushNotificationMeta) meta;
   }
 
   /**
@@ -1032,7 +1032,7 @@ public class PushNotificationStepDialog extends BaseStepDialog implements StepDi
    * 
    * @param info the information.
    */
-  private void getInfo(PushNotificationStepMeta info) {
+  private void getInfo(PushNotificationMeta info) {
     input.setDeviceTokenField(wDeviceTokenField.getText());
     input.setBadgeField(wBadgeField.getText());
     input.setSoundField(wSoundField.getText());

@@ -40,6 +40,7 @@ import org.pentaho.di.trans.step.StepDataInterface;
 import org.pentaho.di.trans.step.StepDialogInterface;
 import org.pentaho.di.trans.step.StepInterface;
 import org.pentaho.di.trans.step.StepMeta;
+import org.pentaho.di.trans.step.StepMetaInjectionInterface;
 import org.pentaho.di.trans.step.StepMetaInterface;
 import org.w3c.dom.Node;
 
@@ -57,8 +58,8 @@ import org.w3c.dom.Node;
     i18nPackageName = "com.latinojoel.di.trans.steps.pushnotifications.apple",
     casesUrl = "https://github.com/latinojoel", documentationUrl = "https://github.com/latinojoel",
     forumUrl = "https://github.com/latinojoel")
-public class PushNotificationStepMeta extends BaseStepMeta implements StepMetaInterface {
-  private static final Class<?> PKG = PushNotificationStepMeta.class; // for i18n purposes
+public class PushNotificationMeta extends BaseStepMeta implements StepMetaInterface {
+  private static final Class<?> PKG = PushNotificationMeta.class; // for i18n purposes
 
   private String deviceTokenField, badgeField, soundField, alertBodyField, actionLocalizedKeyField,
       localizedKeyField, launchImageField, certificatePathField, certificatePasswordField,
@@ -618,6 +619,13 @@ public class PushNotificationStepMeta extends BaseStepMeta implements StepMetaIn
   }
 
   /**
+   * {@inheritDoc}
+   */
+  public StepMetaInjectionInterface getStepMetaInjectionInterface() {
+    return new PushNotificationMetaInjection(this);
+  }
+
+  /**
    * Get the dialog interface step.
    * 
    * @param shell the shell.
@@ -628,7 +636,7 @@ public class PushNotificationStepMeta extends BaseStepMeta implements StepMetaIn
    */
   public StepDialogInterface getDialog(Shell shell, StepMetaInterface meta, TransMeta transMeta,
       String name) {
-    return new PushNotificationStepDialog(shell, (BaseStepMeta) meta, transMeta, name);
+    return new PushNotificationDialog(shell, (BaseStepMeta) meta, transMeta, name);
   }
 
   /**
@@ -645,7 +653,7 @@ public class PushNotificationStepMeta extends BaseStepMeta implements StepMetaIn
   public StepInterface getStep(StepMeta stepMeta, StepDataInterface stepDataInterface, int cnr,
       TransMeta transMeta,
       Trans disp) {
-    return new PushNotificationStep(stepMeta, stepDataInterface, cnr, transMeta, disp);
+    return new PushNotification(stepMeta, stepDataInterface, cnr, transMeta, disp);
   }
 
   /**
@@ -656,7 +664,7 @@ public class PushNotificationStepMeta extends BaseStepMeta implements StepMetaIn
    * @return The appropriate StepDataInterface class.
    */
   public StepDataInterface getStepData() {
-    return new PushNotificationStepData();
+    return new PushNotificationData();
   }
 
 }
