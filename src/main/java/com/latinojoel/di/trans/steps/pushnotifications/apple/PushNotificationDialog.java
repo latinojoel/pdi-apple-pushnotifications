@@ -15,10 +15,7 @@ package com.latinojoel.di.trans.steps.pushnotifications.apple;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CCombo;
@@ -99,7 +96,7 @@ public class PushNotificationDialog extends BaseStepDialog implements StepDialog
   private CTabFolder wTabFolder;
   private CTabItem wMainOptionsTab, wPropTab;
   private TableView wLocalizedArguments, wCustomFields;
-  private Map<String, Integer> inputFields = new HashMap<String, Integer>();
+  private String[] inputFields;
   private List<ColumnInfo> fieldColumns = new ArrayList<ColumnInfo>();
   private Shell parent;
 
@@ -774,16 +771,12 @@ public class PushNotificationDialog extends BaseStepDialog implements StepDialog
           try {
             final RowMetaInterface row = transMeta.getPrevStepFields(stepMeta);
             // Remember these fields...
-            int i = 0;
             if (row != null) {
-              for (String fieldName : row.getFieldNames()) {
-                inputFields.put(fieldName, i);
-                i++;
-              }
+              inputFields = row.getFieldNames();
             }
             setComboBoxes();
           } catch (KettleException e) {
-            logError(BaseMessages.getString(PKG, "System.Dialog.GetFieldsFailed.Message"));
+            logDebug(BaseMessages.getString(PKG, "System.Dialog.GetFieldsFailed.Message"));
           }
         }
       }
@@ -1118,13 +1111,10 @@ public class PushNotificationDialog extends BaseStepDialog implements StepDialog
    */
   private void setComboBoxes() {
     // Something was changed in the row.
-    final Map<String, Integer> fields = inputFields;
-    final Set<String> keySet = fields.keySet();
-    if (keySet != null && keySet.toArray().length > 0) {
-      final String[] fieldNames = (String[]) keySet.toArray();
-      Const.sortStrings(fieldNames);
-      ciFieldsCustomFields[1].setComboValues(fieldNames);
-      ciFieldsLocalizedArgument[0].setComboValues(fieldNames);
+    if (inputFields != null && inputFields.length > 0) {
+      Const.sortStrings(inputFields);
+      ciFieldsCustomFields[1].setComboValues(inputFields);
+      ciFieldsLocalizedArgument[0].setComboValues(inputFields);
     }
   }
 
