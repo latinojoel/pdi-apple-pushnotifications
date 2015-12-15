@@ -30,7 +30,3 @@ Interested Links
 * [Joel Latino Author - Linkedin](http://pt.linkedin.com/in/latinojoel)
 * [Joel Latino Author - Blog](http://joel-latino.blogspot.com/)
 
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/daf12ea06b14ffdff5a8218656362656 "githalytics.com")](http://githalytics.com/latinojoel/pdi-apple-pushnotifications)
-
-
